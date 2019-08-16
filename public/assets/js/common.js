@@ -15,4 +15,13 @@
     }
 
   })
+
+  $.ajax({
+    type:'get',
+    url:'/users/'+userId,
+    success:function(response){
+      $('.avatar').attr("src",response.avtar)
+      $('.profile .name').html(response.nickName)
+    }
+  })
  
